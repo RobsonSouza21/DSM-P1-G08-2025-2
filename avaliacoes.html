@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platinum Odonto - Avaliações</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="avaliacoes.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="./imagens/logoazulcomtexto.jpg"
+          alt="Logo Platinum Odonto"
+          class="logo-nav"
+        />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-link"><span>🏠</span> Início</a>
+          </li>
+          <li>
+            <a href="agendamento.html" class="nav-link"
+              ><span>📅</span> Agendamento</a
+            >
+          </li>
+          <li>
+            <a href="procedimentos.html" class="nav-link"
+              ><span>🦷</span> Procedimentos</a
+            >
+          </li>
+          <li>
+            <a href="profissionais.html" class="nav-link"
+              ><span>👨‍⚕️</span> Profissionais</a
+            >
+          </li>
+          <li>
+            <a href="avaliacoes.html" class="nav-link active"
+              ><span>⭐</span> Avaliações</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-title-section">
+        <h1>Opinião dos Nossos Pacientes</h1>
+        <p>Compartilhe sua experiência e veja o que outros dizem!</p>
+      </section>
+
+      <div class="containerdiv">
+        <div class="formulario">
+          <h2>Avaliação</h2>
+
+          <div class="linha-campos">
+            <div class="cadastro_avaliacao">
+              <input type="text" id="nome" placeholder="Seu nome" />
+            </div>
+
+            <div class="cadastro_avaliacao">
+              <input type="email" id="email" placeholder="Seu email" />
+            </div>
+
+            <div class="cadastro_avaliacao">
+              <input type="tel" id="telefone" placeholder="Telefone" />
+            </div>
+          </div>
+
+          <div class="estrelas" id="starContainer">
+            <span data-star="1">★</span>
+            <span data-star="2">★</span>
+            <span data-star="3">★</span>
+            <span data-star="4">★</span>
+            <span data-star="5">★</span>
+          </div>
+
+          <textarea
+            id="avaliacao"
+            rows="3"
+            placeholder="Escreva sua avaliação..."
+          ></textarea>
+
+          <div class="anonimo">
+            <label>
+              <input type="checkbox" id="anonimo" /> Publicar como anônimo
+            </label>
+          </div>
+
+          <button id="publicarBtn">Publicar</button>
+        </div>
+      </div>
+
+      <div id="listaAvaliacoes"></div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 Platinum Odonto. Todos os direitos reservados.</p>
+    </footer>
+    <div id="faq-placeholder"></div>
+    <script src="script.js"></script>
+    <script>
+      fetch("faq.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("faq-placeholder").innerHTML = html;
+
+          const faqToggle = document.getElementById("faqToggle");
+          const faqPanel = document.getElementById("faqPanel");
+          const faqClose = document.getElementById("faqClose");
+
+          if (!faqToggle || !faqPanel || !faqClose) return;
+
+          faqPanel.setAttribute("hidden", "");
+          faqToggle.setAttribute("aria-expanded", "false");
+
+          function abrirFAQ() {
+            faqPanel.removeAttribute("hidden");
+            faqToggle.setAttribute("aria-expanded", "true");
+          }
+
+          function fecharFAQ() {
+            faqPanel.setAttribute("hidden", "");
+            faqToggle.setAttribute("aria-expanded", "false");
+          }
+
+          faqToggle.addEventListener("click", () => {
+            const fechado = faqPanel.hasAttribute("hidden");
+            fechado ? abrirFAQ() : fecharFAQ();
+          });
+
+          faqClose.addEventListener("click", fecharFAQ);
+        })
+        .catch((err) => console.error("Erro ao carregar FAQ:", err));
+    </script>
+  </body>
+</html>
