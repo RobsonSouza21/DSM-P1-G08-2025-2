@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platinum Odonto - Procedimentos</title>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="./imagens/logoazulcomtexto.jpg"
+          alt="Logo Platinum Odonto"
+          class="logo-nav"
+        />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-link"><span>🏠</span> Início</a>
+          </li>
+          <li>
+            <a href="agendamento.html" class="nav-link"
+              ><span>📅</span> Agendamento</a
+            >
+          </li>
+          <li>
+            <a href="procedimentos.html" class="nav-link active"
+              ><span>🦷</span> Procedimentos</a
+            >
+          </li>
+          <li>
+            <a href="profissionais.html" class="nav-link"
+              ><span>👨‍⚕</span> Profissionais</a
+            >
+          </li>
+          <li>
+            <a href="avaliacoes.html" class="nav-link"
+              ><span>⭐</span> Avaliações</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      <section class="page-title-section">
+        <h1>Nossos Procedimentos</h1>
+        <p>Conheça todos os tratamentos que oferecemos</p>
+      </section>
+
+
+      <div class="container">
+        <section class="card procedimento-card">
+          <div class="procedimento-image">
+            <img src="./imagens/3.jpg" alt="Clareamento Dental" />
+          </div>
+          <div class="procedimento-info">
+            <h3>Clareamento Dental</h3>
+            <p>
+              O clareamento dental é um procedimento estético que visa clarear
+              os dentes, removendo manchas e descolorações. Utilizamos técnicas
+              modernas e seguras, com ou sem moldeiras, para garantir resultados
+              eficazes sem prejudicar o esmalte dentário.
+            </p>
+            <h4>Principais características:</h4>
+            <ul>
+              <li>Técnica a laser para resultados imediatos</li>
+              <li>Moldeiras personalizadas para usar em casa</li>
+              <li>Acompanhamento profissional durante todo o tratamento</li>
+              <li>Resultados que duram de 1 a 3 anos</li>
+              <li>Duração: 1 a 3 sessões</li>
+            </ul>
+          </div>
+        </section>
+
+
+        <section class="card procedimento-card reverse">
+          <div class="procedimento-image">
+            <img src="./imagens/2.jpg" alt="Implante Dentário" />
+          </div>
+          <div class="procedimento-info">
+            <h3>Implante Dentário</h3>
+            <p>
+              Implantes dentários são a melhor solução para substituição de
+              dentes perdidos. Através de um pino de titânio fixado no osso,
+              criamos a raiz do dente e posicionamos a coroa sobre ela para o
+              paciente reaver aparência e função de forma natural.
+            </p>
+            <h4>Principais características:</h4>
+            <ul>
+              <li>Implantes de titânio de alta qualidade</li>
+              <li>Planejamento 3D computadorizado</li>
+              <li>Cirurgia minimamente invasiva</li>
+              <li>Resultado estético e funcional permanente</li>
+              <li>Duração: 3 a 6 meses (processo completo)</li>
+            </ul>
+          </div>
+        </section>
+
+
+        <section class="card procedimento-card">
+          <div class="procedimento-image">
+            <img src="./imagens/1.jpg" alt="Ortodontia (Aparelho)" />
+          </div>
+          <div class="procedimento-info">
+            <h3>Ortodontia (Aparelho)</h3>
+            <p>
+              A ortodontia corrige o posicionamento dos dentes e problemas na
+              mordida. Oferecemos aparelhos fixos metálicos, estéticos
+              (porcelana) e alinhadores invisíveis (Invisalign), com
+              planejamento digital para garantir os melhores resultados.
+            </p>
+            <h4>Principais características:</h4>
+            <ul>
+              <li>Alinhadores invisíveis (Invisalign)</li>
+              <li>Aparelhos estéticos de porcelana</li>
+              <li>Atendimento ortodôntico personalizado</li>
+              <li>Tecnologias de escaneamento para tratamentos mais rápidos</li>
+              <li>Duração: 12 a 36 meses</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+
+    <footer class="site-footer">
+      <p>© 2025 Platinum Odonto. Todos os direitos reservados.</p>
+    </footer>
+    <div id="faq-placeholder"></div>
+    <script>
+      fetch("faq.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("faq-placeholder").innerHTML = html;
+
+
+          const faqToggle = document.getElementById("faqToggle");
+          const faqPanel = document.getElementById("faqPanel");
+          const faqClose = document.getElementById("faqClose");
+
+
+          if (!faqToggle || !faqPanel || !faqClose) return;
+
+
+          faqPanel.setAttribute("hidden", "");
+          faqToggle.setAttribute("aria-expanded", "false");
+
+
+          function abrirFAQ() {
+            faqPanel.removeAttribute("hidden");
+            faqToggle.setAttribute("aria-expanded", "true");
+          }
+
+
+          function fecharFAQ() {
+            faqPanel.setAttribute("hidden", "");
+            faqToggle.setAttribute("aria-expanded", "false");
+          }
+
+
+          faqToggle.addEventListener("click", () => {
+            const fechado = faqPanel.hasAttribute("hidden");
+            fechado ? abrirFAQ() : fecharFAQ();
+          });
+
+
+          faqClose.addEventListener("click", fecharFAQ);
+        })
+        .catch((err) => console.error("Erro ao carregar FAQ:", err));
+    </script>
+  </body>
+</html>
