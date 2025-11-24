@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platinum Odonto - Início</title>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="./imagens/logoazulcomtexto.jpg"
+          alt="Logo Platinum Odonto"
+          class="logo-nav"
+        />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-link active"
+              ><span>🏠</span> Início</a
+            >
+          </li>
+          <li>
+            <a href="agendamento.html" class="nav-link"
+              ><span>📅</span> Agendamento</a
+            >
+          </li>
+          <li>
+            <a href="procedimentos.html" class="nav-link"
+              ><span>🦷</span> Procedimentos</a
+            >
+          </li>
+          <li>
+            <a href="profissionais.html" class="nav-link"
+              ><span>👨‍⚕️</span> Profissionais</a
+            >
+          </li>
+          <li>
+            <a href="avaliacoes.html" class="nav-link"
+              ><span>⭐</span> Avaliações</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <img
+            src="./imagens/logoazulcomtexto.jpg"
+            alt="Logo Principal Platinum Odonto"
+            class="logo-main"
+          />
+          <h1>Transformando sorrisos, cuidando da sua saúde</h1>
+        </div>
+      </section>
+
+
+      <div class="container">
+        <section class="card content-section">
+          <div class="two-column-layout">
+            <div class="column-left">
+              <h2>Nossa História</h2>
+              <p>
+                Fundada em 2010, a <strong>Platinum Odonto</strong> nasceu do
+                sonho de unificar alta performance em tratamentos odontológicos
+                de excelência com tecnologias de ponta e humanização.
+              </p>
+              <p>
+                Nossa clínica é referência em tratamentos odontológicos
+                completos, contando com equipe profissional, com equipamentos
+                modernos e ambiente acolhedor.
+              </p>
+              <p>
+                Ao longo de mais de 13 anos, já transformamos milhares de
+                sorrisos em nossa região, sempre zelando pela saúde de sua
+                família.
+              </p>
+
+
+              <div class="stats-bar">
+                <div class="stat-item">
+                  <h3>13+</h3>
+                  <p>Anos</p>
+                </div>
+                <div class="stat-item">
+                  <h3>15K+</h3>
+                  <p>Pacientes</p>
+                </div>
+                <div class="stat-item">
+                  <h3>98%</h3>
+                  <p>Satisfação</p>
+                </div>
+              </div>
+            </div>
+            <div class="column-right">
+              <img
+                src="./imagens/dentistacompaciente.jpeg"
+                alt="Doutor atendendo paciente"
+                class="imglateralinicio"
+              />
+            </div>
+          </div>
+
+
+          <h2 style="text-align: center; margin-top: 40px">
+            Onde Nos Encontrar
+          </h2>
+          <div class="info-cards-container">
+            <div class="info-card">
+              <h3><span>📍</span> Localização</h3>
+              <p>
+                Av. Paulista, 1000<br />Bela Vista, São Paulo - SP<br />CEP:
+                01310-100
+              </p>
+            </div>
+            <div class="info-card">
+              <h3><span>📞</span> Contato</h3>
+              <p><strong>Telefone:</strong><br />(11) 98765-4321</p>
+              <p><strong>Whatsapp:</strong><br />(11) 91234-5678</p>
+            </div>
+            <div class="info-card">
+              <h3><span>⏰</span> Horário</h3>
+              <p><strong>Segunda a Sexta:</strong><br />08:00 - 18:00</p>
+              <p><strong>Sábado:</strong><br />08:00 - 13:00</p>
+            </div>
+          </div>
+
+
+          <div class="map-placeholder">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1043736113506!2d-46.651785!3d-23.5646946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7f26deab1%3A0xa82f68d54bfe828f!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1763854483520!5m2!1spt-BR!2sbr"
+              width="800"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+      </div>
+    </main>
+
+
+    <footer class="site-footer">
+      <p>© 2025 Platinum Odonto. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <div id="faq-placeholder"></div>
+
+
+    <script src="/script.js"></script>
+
+
+    <script>
+      fetch("faq.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("faq-placeholder").innerHTML = html;
+
+
+          const faqToggle = document.getElementById("faqToggle");
+          const faqPanel = document.getElementById("faqPanel");
+          const faqClose = document.getElementById("faqClose");
+
+
+          if (!faqToggle || !faqPanel || !faqClose) return;
+
+
+          faqPanel.setAttribute("hidden", "");
+          faqToggle.setAttribute("aria-expanded", "false");
+
+
+          function abrirFAQ() {
+            faqPanel.removeAttribute("hidden");
+            faqToggle.setAttribute("aria-expanded", "true");
+          }
+
+
+          function fecharFAQ() {
+            faqPanel.setAttribute("hidden", "");
+            faqToggle.setAttribute("aria-expanded", "false");
+          }
+
+
+          faqToggle.addEventListener("click", () => {
+            const fechado = faqPanel.hasAttribute("hidden");
+            fechado ? abrirFAQ() : fecharFAQ();
+          });
+
+
+          faqClose.addEventListener("click", fecharFAQ);
+        })
+        .catch((err) => console.error("Erro ao carregar FAQ:", err));
+    </script>
+  </body>
+</html>
