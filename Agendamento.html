@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platinum Odonto - Agendamento</title>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="./imagens/logoazulcomtexto.jpg"
+          alt="Logo Platinum Odonto"
+          class="logo-nav"
+        />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-link"><span>🏠</span> Início</a>
+          </li>
+          <li>
+            <a href="agendamento.html" class="nav-link active"
+              ><span>📅</span> Agendamento</a
+            >
+          </li>
+          <li>
+            <a href="procedimentos.html" class="nav-link"
+              ><span>🦷</span> Procedimentos</a
+            >
+          </li>
+          <li>
+            <a href="profissionais.html" class="nav-link"
+              ><span>👨‍⚕️</span> Profissionais</a
+            >
+          </li>
+          <li>
+            <a href="avaliacoes.html" class="nav-link"
+              ><span>⭐</span> Avaliações</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      <section class="page-title-section">
+        <h1>Agende sua Consulta</h1>
+        <p>Escolha o melhor horário e profissional para você</p>
+      </section>
+
+
+      <div class="container">
+        <div class="two-column-layout">
+          <div class="column-left">
+            <form class="card form-card">
+              <h3><span>📝</span> Dados do Agendamento</h3>
+
+
+              <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Seu nome completo" />
+              </div>
+
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="telefone">Telefone</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="(11) 9XXXX-XXXX"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" placeholder="seu@email.com" />
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="procedimento">Procedimento</label>
+                <select id="procedimento">
+                  <option value="">Selecione o procedimento</option>
+                  <option value="clareamento">Clareamento Dental</option>
+                  <option value="implante">Implante Dentário</option>
+                  <option value="ortodontia">Ortodontia (Aparelho)</option>
+                  <option value="limpeza">Limpeza e Profilaxia</option>
+                </select>
+              </div>
+
+
+              <div class="form-group">
+                <label for="profissional">Profissional</label>
+                <select id="profissional">
+                  <option value="">Selecione o profissional</option>
+                  <option value="ana">Dra. Ana Paula Silva</option>
+                  <option value="carlos">Dr. Carlos Mendes</option>
+                  <option value="mariana">Dra. Mariana Costa</option>
+                  <option value="roberto">Dr. Roberto Lima</option>
+                </select>
+              </div>
+
+
+              <div class="form-group">
+                <label for="unidade">Unidade</label>
+                <select id="unidade">
+                  <option value="">Selecione a unidade</option>
+                  <option value="paulista">Av. Paulista, 1000</option>
+                </select>
+              </div>
+
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="data">Data Preferencial</label>
+                  <input type="date" id="data" />
+                </div>
+                <div class="form-group">
+                  <label for="horario">Horário Preferencial</label>
+                  <select id="horario">
+                    <option value="">Selecione o horário</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <button type="submit" class="btn btn-full">
+                <span>✔</span> Confirmar Agendamento
+              </button>
+            </form>
+          </div>
+
+
+          <div class="column-right">
+            <div class="card">
+              <img
+                src="./imagens/dentistacompaciente2cortado.jpeg"
+                alt="Doutor atendendo paciente"
+                class="imgagendamento"
+              />
+
+
+              <div class="info-box-card">
+                <h3>Por que agendar conosco?</h3>
+                <ul>
+                  <li><span>💬</span> Confirmação rápida por Whatsapp</li>
+                  <li><span>🗓️</span> Flexibilidade de horários</li>
+                  <li><span>👨‍⚕️</span> Profissionais especializados</li>
+                  <li>
+                    <span>⭐</span> Primeira consulta com avaliação gratuita
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="duvidas-box">
+                <h3>Dúvidas?</h3>
+                <p>
+                  Prefere um contato conosco? É só ligar ou nos chamar direto no
+                  agenda:
+                </p>
+                <p><strong>📞 (11) 98765-4321</strong></p>
+                <p><strong>Seg-Sex:</strong> 08:00 - 18:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <footer class="site-footer">
+      <p>© 2025 Platinum Odonto. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <div id="faq-placeholder"></div>
+
+
+    <script src="/script.js"></script>
+
+
+    <script>
+      fetch("faq.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("faq-placeholder").innerHTML = html;
+
+
+          const faqToggle = document.getElementById("faqToggle");
+          const faqPanel = document.getElementById("faqPanel");
+          const faqClose = document.getElementById("faqClose");
+
+
+          if (!faqToggle || !faqPanel || !faqClose) return;
+
+
+          faqPanel.setAttribute("hidden", "");
+          faqToggle.setAttribute("aria-expanded", "false");
+
+
+          function abrirFAQ() {
+            faqPanel.removeAttribute("hidden");
+            faqToggle.setAttribute("aria-expanded", "true");
+          }
+
+
+          function fecharFAQ() {
+            faqPanel.setAttribute("hidden", "");
+            faqToggle.setAttribute("aria-expanded", "false");
+          }
+
+
+          faqToggle.addEventListener("click", () => {
+            const fechado = faqPanel.hasAttribute("hidden");
+            fechado ? abrirFAQ() : fecharFAQ();
+          });
+
+
+          faqClose.addEventListener("click", fecharFAQ);
+        })
+        .catch((err) => console.error("Erro ao carregar FAQ:", err));
+    </script>
+  </body>
+</html>
