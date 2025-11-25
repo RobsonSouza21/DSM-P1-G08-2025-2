@@ -128,6 +128,18 @@ Página dedicada a **comentários e avaliações**:
     ```
   - isso evita repetição de código e mantém o FAQ em um único lugar.
 
+---
+
+# 🖥️ Protótipo e Site Hospedado
+
+🔗 **Protótipo no Figma**  
+https://www.figma.com/design/xEElBj0KwG4nKUb8S2I8DE/Untitled?node-id=0-1&t=V3Q22xnTL9PNywKE-1 
+
+🌐 **Site Hospedado**  
+https://robsonsouza21.github.io/DSM-P1-G08-2025-2/agendamento.html
+
+---
+
  # 🙏 Conclusão e Agradecimentos
 
 Este projeto foi desenvolvido com o objetivo de facilitar o agendamento e procura de consultas medicas do dia a dia das pessoas: a dificuldade em marcar consultas e receber informações claras sobre atendimentos.
